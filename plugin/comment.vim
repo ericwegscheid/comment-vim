@@ -2,7 +2,7 @@
 " File: comment.vim
 " Author: Eric Wegscheid <ericwegscheid@gmail.com>
 " WebPage: http://github.com/mattn/emmet-vim
-" Description: Use <leader>c to toggle current or selected lines of code from 
+" Description: Toggle commented code
 "=============================================================================
 
 fun! Comment()
