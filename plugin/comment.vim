@@ -6,7 +6,7 @@
 "=============================================================================
 
 
-" TODO: modify functino as needed to get what it necessary for comment_selection function
+" TODO: modify function as needed to get what it necessary for comment_selection function
 fun! s:get_visual_selection()
 	let [line_start, column_start] = getpos("'<")[1:2]
 	let [line_end, column_end] = getpos("'>")[1:2]
@@ -38,7 +38,7 @@ fun! Comment()
 	if index(['sh', 'ruby', 'python', 'conf', 'ini', 'htaccess'], &filetype) >= 0
 		let comment_leader = '#'
 
-	elseif index(['c', 'cpp', 'java', 'javascript', 'php', 'less'], &filetype) >= 0
+	elseif index(['c', 'cpp', 'java', 'javascript', 'typescript', 'php', 'less', 'groovy'], &filetype) >= 0
 		let comment_leader = '//'
 
 	elseif index(['vim'], &filetype) >= 0
