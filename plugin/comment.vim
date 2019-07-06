@@ -50,7 +50,7 @@ fun! Comment()
   elseif index(['autohotkey'], &filetype) >= 0
     let comment_leader = ';'
 
-  Else
+  else
     echohl WarningMsg
     echo "Warning"
     echohl None
