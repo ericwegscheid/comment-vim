@@ -27,8 +27,8 @@ fun! s:comment_selection(selection)
   echo 'asdfasdf'
 endf
 
-  " TODO: update to use with range so that this function is only called once
-  " fun! Comment() range
+" TODO: update to use with range so that this function is only called once
+" fun! Comment() range
 fun! Comment()
 "   let selection = GetSelection()
 "   echo selection
@@ -68,25 +68,5 @@ fun! Comment()
   endif
 endf
 
-
-" this is a test super duper
-" yuppers alskdj
-" alsdk ald
-" is a test super duperyupper
-
-
-fun! Test()
-  " what does the bang at the beginning of a function do?
-"   let sel = GetSelection()
-  let sel = s:get_visual_selection()
-  call system("echo " . sel . " | pbcopy")
-endf
-
 noremap <leader>c :call Comment()<CR>
-noremap <leader>d :call Test()<CR>
-noremap <leader>r :source ~/.vim/bundle/comment-vim/plugin/comment.vim<CR>
-
-
-
-
 
