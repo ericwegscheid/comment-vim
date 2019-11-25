@@ -38,7 +38,7 @@ fun! Comment()
   if index(['sh', 'ruby', 'python', 'conf', 'ini', 'htaccess', 'gitconfig'], &filetype) >= 0
     let comment_leader = '#'
 
-  elseif index(['c', 'cpp', 'java', 'javascript', 'typescript', 'php', 'less', 'groovy'], &filetype) >= 0
+  elseif index(['c', 'cpp', 'java', 'javascript', 'typescript', 'php', 'less', 'scss', 'groovy'], &filetype) >= 0
     let comment_leader = '//'
 
   elseif index(['vim'], &filetype) >= 0
