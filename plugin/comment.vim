@@ -51,6 +51,7 @@ fun! Comment()
     let comment_leader = ';'
 
   else
+    " TODO warn only once for multiple lines
     echohl WarningMsg
     echo "Warning"
     echohl None
