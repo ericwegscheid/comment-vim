@@ -50,6 +50,10 @@ fun! Comment()
   elseif index(['autohotkey'], &filetype) >= 0
     let comment_leader = ';'
 
+  elseif index(['html'], &filetype) >= 0
+    execute ":normal O<!--\<CR>-->\<ESC>O"
+    return
+
   else
     " TODO warn only once for multiple lines
     echohl WarningMsg
