@@ -51,7 +51,7 @@ fun! Comment()
     let comment_leader = ';'
 
   elseif index(['html'], &filetype) >= 0
-    execute ":normal O<!--\<CR>-->\<ESC>O"
+    execute ":normal O<!--\<CR>-->\<ESC>"
     return
 
   else
