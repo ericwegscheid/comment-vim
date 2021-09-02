@@ -35,7 +35,7 @@ fun! Comment()
 
   let comment_leader = ''
 
-  if index(['sh', 'zsh', 'ruby', 'python', 'conf', 'ini', 'htaccess', 'gitconfig'], &filetype) >= 0
+  if index(['sh', 'zsh', 'ruby', 'python', 'conf', 'ini', 'htaccess', 'gitconfig', 'yaml'], &filetype) >= 0
     let comment_leader = '#'
 
   elseif index(['c', 'cpp', 'java', 'javascript', 'typescript', 'php', 'less', 'scss', 'groovy'], &filetype) >= 0
