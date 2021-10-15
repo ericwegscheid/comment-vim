@@ -30,8 +30,8 @@ endf
 " TODO: update to use with range so that this function is only called once
 " fun! Comment() range
 fun! Comment()
-"   let selection = GetSelection()
-"   echo selection
+  " let selection = GetSelection()
+  " echo selection
 
   let comment_leader = ''
 
@@ -65,10 +65,13 @@ fun! Comment()
 
   let line = getline('.')
 
-  if line =~ '^' . comment_leader . '.*$'
-    call setline('.', strpart(line, strlen(comment_leader) + 1))
+  if line =~ '^\s*' . comment_leader . '.*$'
+    " call setline('.', strpart(line, strlen(comment_leader) + 1))
+    call setline('.', substitute(line, comment_leader . ' ', '', ''))
   else
-    call setline('.', comment_leader . ' ' . getline('.'))
+    " call setline('.', comment_leader . ' ' . getline('.'))
+    execute ':normal I' . comment_leader . ' '
+    execute ':normal ^'
   endif
 endf
 
