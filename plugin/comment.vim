@@ -59,8 +59,8 @@ fun! Comment()
     echohl WarningMsg
     echo "Warning"
     echohl None
-    echon ': filetype ' . &filetype . ' is not supported, using default: //'
-    let comment_leader = '//'
+    echon ': filetype ' . &filetype . ' is not supported, using default: #'
+    let comment_leader = '#'
   endif
 
   let line = getline('.')
