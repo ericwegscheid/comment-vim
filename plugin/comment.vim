@@ -54,6 +54,10 @@ fun! Comment()
     execute ":normal O<!--\<CR>-->\<ESC>"
     return
 
+  elseif index(['markdown'], &filetype) >= 0
+    execute ":normal O[//]: # (\<CR>)\<ESC>"
+    return
+
   else
     " TODO warn only once for multiple lines
     echohl WarningMsg
