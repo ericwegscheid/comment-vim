@@ -1,6 +1,13 @@
 ## Installing
 
-copy the `plugin/` directory to `~/.vim/pack/plugins/start/comment-vim/plugin/`
+Initial setup:
+```
+mkdir -p ~/.vim/pack/plugins/start
+git clone --depth 1 https://github.com/ericwegscheid/comment-vim.git ~/.vim/pack/plugins/start
+```
 
-tip: clone the repo, run `git pull` to update plugin, use a symlink for the `~/.vim/pack/plugins/start/...`
+For updates or to fetch the latest code:
+```
+cd ~/.vim/pack/plugins/start/comment-vim && git pull
+```
 
