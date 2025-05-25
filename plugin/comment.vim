@@ -41,6 +41,9 @@ fun! Comment()
   elseif index(['c', 'cpp', 'java', 'javascript', 'typescript', 'php', 'less', 'scss', 'groovy'], &filetype) >= 0
     let comment_leader = '//'
 
+  elseif index(['lua'], &filetype) >= 0
+    let comment_leader = '--'
+
   elseif index(['vim'], &filetype) >= 0
     let comment_leader = '"'
 
